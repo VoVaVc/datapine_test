@@ -53,14 +53,15 @@ require([
 
             function checkData(){
                 if(Object.keys(parsedCurrency).length){
-                    setTimeout(renderChart, 15, {
-                        index       : i,
-                        currencyDict: [parsedCurrency[currencyNameDict[i]]],
+                    var index = parseInt(data.page.replace(/[^0-9.]/g, ""))
+                    renderChart({
+                        index       : index,
+                        currencyDict: [parsedCurrency[currencyNameDict[index]]],
                         width       : 400,
                         height      : 220
-                    }, $('.chartContainer'))
+                    }, $('.chartContainer'), data);
                 } else {
-                    setTimeout(checkData, 250);
+                    setTimeout(checkData, 250, data);
                 }
             }
             checkData();
