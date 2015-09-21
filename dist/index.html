@@ -1,0 +1,84 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>datapine::senior test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+          <a href="#" class="left" title="back to thumbnail">&#x2637;</a>
+          <h1>Chart displaying app example</h1>
+          <div class="right">
+            <input type="checkbox" id="triggerView" checked="checked">
+          </div>
+        </header>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="hero-unit" style="display:none">
+          <h1>datapine's Senior Frontend Developers' test</h1>
+          <p>We would like you to build a small charting application, using this template or something totally different, it is up to you. We would prefer it if you use the below libraries, but again, if you know something similar, and believe you can do a better job with it then by all means use that instead. However, your application must be a SPA. We would prefer your application to not look like a typical bootstrap application...</p>
+          <p>We would like you to use something such as the following:</p>
+          <ul>
+            <li>Backbone+Backbone Layoutmanager / Angular.js</li>
+            <li>RequireJS</li>
+            <li>Highcharts</li>
+            <li>CSS written with LESS/SASS and not plain CSS like this template currently has. </li>
+          </ul>
+          <p>We would like your application to load a number of charts (4+ depending upon your thumbnail size and application design) on a page. These charts should adhere to these conditions:</p>
+          <ul>
+              <li>All charts should be in thumbnail mode on the initial page</li>
+              <li>All charts should be given a full view mode (lightbox or new page). If you can do this via routes, that would be awesome.</li>
+              <li>All charts should be able to switch something simple, such as the chart type or chart name. <em>Persistent data isn't expected to be implemented if you're using JSON files</em></li>
+              <li>The chart data should be pulled from a resource. A simple .json file would suffice</li>
+          </ul>
+          <p>Additional to the charts, we would like you to make a menu that allows you switch between the initial page and a page that explains (in brief) your test and how you go about loading it &amp;c. <em>(typical README.md stuff)</em></p>
+          <p>We will be judging your test on how your application looks and feels, meeting the above specifications, the quality of code and how it has been executed. Anything additional that you may add to show off your best skills <em>(such as a chart filter)</em> is always welcome.</p>
+          <p>Once your test is complete, we would ideally prefer it if you uploaded your test to a public repo and sent us the details. You could alternatively send us the file via email</p>
+        </div>
+
+        <div id="thumbnail" class="page">
+          <ul class="chart-list visible active">
+            
+          </ul>
+          <div id="bigChart">
+            
+          </div>
+        </div>
+        <div class="chartsContainer"></div>
+        <script type="text/template" id="chartPageTemplate"> 
+          <div id="<%= page %>" class="page">
+            <div class="chartContainer"></div>
+          </div>
+        </script>
+
+        <script type="text/template" id="chartTemplate"> 
+          <li id="chartWidget<%= index %>">
+              <a href="#chart<%= index %>">
+                <h4><%= name %></h4>
+                <p><%= description %></p>
+                <div class="chartWrapper"></div>
+              </a>
+            </li>
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

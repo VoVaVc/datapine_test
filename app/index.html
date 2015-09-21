@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>datapine::senior test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+          <a href="#" class="left" title="back to thumbnail">&#x2637;</a>
+          <h1>Chart displaying app example</h1>
+          <div class="right">
+            <input type="checkbox" id="triggerView" checked>
+          </div>
+        </header>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div id="thumbnail" class="page">
+          <ul class="chart-list visible active">
+            
+          </ul>
+          <div id="bigChart">
+            
+          </div>
+        </div>
+        <div class="chartsContainer"></div>
+        <script type="text/template" id="chartPageTemplate"> 
+          <div id="<%= page %>" class="page">
+            <div class="chartContainer"></div>
+          </div>
+        </script>
+
+        <script type="text/template" id="chartTemplate"> 
+          <li id="chartWidget<%= index %>">
+              <a href="#chart<%= index %>">
+                <h4><%= name %></h4>
+                <p><%= description %></p>
+                <div class="chartWrapper"></div>
+              </a>
+            </li>
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
